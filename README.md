@@ -2,6 +2,7 @@
 
 [![Software License][ico-license]](LICENSE.md)
 [![Build Status](https://travis-ci.org/Talk-Point/tp-task-runner-develop.svg?branch=master)](https://travis-ci.org/Talk-Point/tp-task-runner-develop)
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/Talk-Point/tp-task-runner/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/Talk-Point/tp-task-runner/?branch=master)
 
 Task runner framework for Laravel.
 
@@ -29,7 +30,9 @@ Add to the `app/config.php` file in `providers`
 To use the tasks polymorph relation extends your model from the `TPTaskRunner\Models\TaskRelationBaseModel` model from the Framework.
 Than you can get the tasks with the method `$model->tasks()->get()`
 
-To create a new task for your model.
+__Task:__
+
+To create a task, with `run()` you start the task.
 
 ```php
 $model = YouModel::create([]);
@@ -38,7 +41,9 @@ $model->tasks()->save($task);
 $task->run();
 ```
 
-To create a new task with data:
+__Task with Data:__
+
+To create a task with data.
 
 ```php
 # Create
